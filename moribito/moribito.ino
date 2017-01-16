@@ -44,17 +44,17 @@ void mode(){//モードの選択
 
 void waiteHome(){ //家にいるときの動作 mode_flag==0;
   //仮code
-  digitalWrite(13, LOW);
+  digitalWrite(13, LOW); //消灯
 }
 
 void satellite(){//人についていくときの動作 mode_flag==1;
   //仮code
-  digitalWrite(13, HIGH);
+  digitalWrite(13, HIGH); //点灯
 }
 
 void goHome(){//家に帰るときの動作 mode_flag==2;
   //仮code
-  digitalWrite(13, HIGH);
+  digitalWrite(13, HIGH); //点滅
   delay(100);
   digitalWrite(13, LOW);
   delay(100);
