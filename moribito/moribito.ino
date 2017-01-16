@@ -16,7 +16,12 @@ void loop(){
     prev = cur;
     if (osw == LOW && sw == HIGH) { //スイッチを押して離したとき
       mode_flag=mode_flag+1;
-      if(mode_flag>2)mode_flag=0;
+      if(mode_flag>2)mode_flag=0; //最終的にmode_flagはついてくるか帰るかに変化
+      //if(mode_flag==1){
+      //  mode_flag=2;
+      //}else{
+      //  mode_flag=1;
+      //}
       delay(20);
     }
     osw = sw;
@@ -37,17 +42,17 @@ void mode(){//モードの選択
   }
 }
 
-void waiteHome(){ //家にいるときの動作
+void waiteHome(){ //家にいるときの動作 mode_flag==0;
   //仮code
   digitalWrite(13, LOW);
 }
 
-void satellite(){//人についていくときの動作
+void satellite(){//人についていくときの動作 mode_flag==1;
   //仮code
   digitalWrite(13, HIGH);
 }
 
-void goHome(){//家に帰るときの動作
+void goHome(){//家に帰るときの動作 mode_flag==2;
   //仮code
   digitalWrite(13, HIGH);
   delay(100);
