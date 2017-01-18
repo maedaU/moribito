@@ -1,3 +1,6 @@
+//参考URL: http://qiita.com/miminashi/items/491ff1968725eec45d84
+//参考URL: http://qiita.com/miminashi/items/72b7874ed729c51318f9
+
 unsigned long prev = 0;
 bool osw = HIGH;
 int mode_flag=0;
