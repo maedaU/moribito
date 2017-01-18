@@ -24,7 +24,7 @@ void loop(){
         mode_flag=1;
       }
       delay(20);
-      //Serial.write(mode_flag); //Serialに書き込みProcessingに送る. mode_flagが  [0]家にいるとき，[1]人についていくとき，[2]家に帰るとき
+      Serial.write(mode_flag); //Serialに書き込みProcessingに送る. mode_flagが  [0]家にいるとき，[1]人についていくとき，[2]家に帰るとき
     }
     osw = sw;
   }
